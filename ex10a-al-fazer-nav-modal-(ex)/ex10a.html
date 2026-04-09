@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,10 +9,86 @@
 <body>
     
 
-    <!-- Botão "Contato"  -->
-     <div class="btn btn-primary"
+ <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <div class="container">
+            
+             <!-- Botão Menu Hamburguer -->
+              <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#minhaNavbar">
+                <span class="navbar-toggler-icon text-light" style="filter: invert(1);"></span>
+              </button>
+
+             <!-- Links -->
+            <div class="collapse navbar-collapse" id="minhaNavbar">
+              <div class="navbar-nav ms-auto">
+                <a href="#" class="navbar-link text-light m-3">Home</i></a>
+                <a href="#" class="navbar-link text-light m-3">Perfil</i></a>
+                <a href="#" class="navbar-link text-light m-3">Mensagens</i></a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exemploModal">Contato</button>
+                </div>
+            </div>
+</nav>
 
 
+        <div class="modal fade" id="exemploModal">
+            <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title">Entre em contato</h5>
+                            <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Conteúdo Interno -->
+                        <div class="modal-body">
+                            <form class="custom-form needs-validation" novalidate>
+
+                            <!-- Campo para o Nome -->  
+                            <div class="mb-4">
+                                <label for="nomeInput" class="form-label" >Nome</label>
+                                <div class="input-group" style="width: 100%; max-width:470px">
+                                        <div class="input-group" >
+                                            <input type="text" id="nomeInput" class="form-control custom-input" required>
+                                            <div class="invalid-feedback">Por favor, digite seu nome.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            <!-- Campo para e-mail -->
+                            <div class="mb-4">
+                                <label for="emailInput" class="form-label" >Email</label>
+                                <div class="input-group" style="width: 100%; max-width:470px">
+                                        <div class="input-group">
+                                            <input type="email" id="emailInput" class="form-control custom-input" required>
+                                            <div class="invalid-feedback">Por favor, digite seu email.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            <!-- Mensagem-->
+                            <div class="col-sm-6 mb-3" >
+                                <label for="msgInput" class="form-label">Mensagem</label>
+                                <div class="input-group" style="width:470px; height:100px">
+                                    <div class="input-group">
+                                        <input type="text" id="mgsInput" class="form-control custom-input" required>
+                                        <div class="invalid-feedback">Por favor, digite sua mensagem.-</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Botão para enviar -->
+                                <button type="submit" class="btn btn-info text-light" style="width:80px;">Enviar</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        
 <script>
     (function () {
         'use strict'
